@@ -16,7 +16,7 @@ class Task
   include DataMapper::Resource
   
   property :id,          Serial
-  property :description, Text, :nullable => false
+  property :description, Text
   property :is_done,     Boolean
   
   def url
@@ -45,7 +45,7 @@ class Task
   
 end
 
-DataMapper.auto_upgrade!
+# DataMapper.auto_upgrade!
 
 
 # return list of all installed tasks
